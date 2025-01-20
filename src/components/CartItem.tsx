@@ -6,6 +6,7 @@ import Minus from "../images/icons/dash-square.svg"
 import Trash from "../images/icons/trash3.svg"
 import { useContext } from "react"
 import { CartContext } from "../contexts/CartContext"
+import { SidebarContext } from "../contexts/SidebarContext"
 
 interface cartItemProps  {
   item : ProductType
@@ -16,8 +17,12 @@ const CartItem = ({item}: cartItemProps) => {
   const {id ,title , price , image , amount, category} = item
 
   const {removeFromCart, increaseAmount,decreaseAmount } :any = useContext(CartContext)
+
+  const {handleClose}: any = useContext(SidebarContext)
   
   const total : number = parseFloat((price * amount).toFixed(2))
+
+  
 
   return (
   
@@ -25,7 +30,8 @@ const CartItem = ({item}: cartItemProps) => {
           <div className="space-y-4 w-full">
   
             <div className="product-card w-full bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg shadow-lg p-4 flex items-center transition-transform hover:scale-105 hover:shadow-xl">
-              <Link to={`/product/${id}`}>
+              <Link to={`/product/${id}`}
+              onClick={()=>handleClose()}>
                 <img
                   src={image}
                   alt="Product Image"
@@ -34,6 +40,7 @@ const CartItem = ({item}: cartItemProps) => {
               </Link>
               <div className="ml-4 w-full">
                 <Link to ={`/product/${id}`}
+                  onClick={()=>handleClose()}
                    className="text-lg font-semibold text-gray-800 hover:text-amber-600 hover:underline">{title}
                 </Link>
                 <p className="text-sm text-gray-600">Category: {category}</p>

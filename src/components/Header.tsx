@@ -23,12 +23,14 @@ const Header = () => {
 
   return (
     <header className={`w-full h-20   ${isActive ? 'shadow-lg   transition-all duration-200 ' : ''} fixed z-50 mb-6 py-2`}>
-        <div className="container h-full  mx-auto flex items-center justify-between ">
-          <Link onClick={()=>setSelectedCAtegory('all products')} className="h-full" to={'/'}>
-              <div className="h-full hover:scale-110 transition-all duration-300 shadow-lg mx-3 rounded-sm overflow-hidden flex items-center ">
-                <img src={Logo} alt="logo"  className=" size-full  object-contain"/>
-              </div>
-          </Link>
+        <div className="container h-full w-full  mx-auto flex items-center justify-between ">
+          <div className="h-full ml-3 shadow-lg  ">
+            <Link onClick={()=>setSelectedCAtegory('all products')}  to={'/'} className="h-full w-full">
+                <div className="h-full w-full bg-inherit hover:scale-110 transition-all duration-300  rounded-sm overflow-hidden  ">
+                  <img src={Logo} alt="logo"  className=" h-full w-full  object-cover  "/>
+                </div>
+            </Link>
+          </div>
           {/* <span className="uppercase font-light font-sans  text-lg  italic">
             Minimalistic and Simple E-commerce Website 
             <hr />

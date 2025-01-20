@@ -34,7 +34,7 @@ const ProductDetails = () => {
           <h1 className="text-lg font-medium md:text-3xl font-sans md:font-semibold">{title}</h1>
           <p className="mt-5 md:text-lg text-sm">{description}</p>
           <p className="font-light mt-5 mb-3">Category: {category}</p>
-          <div className="flex items-center justify-between px-5">
+          <div className="flex items-center justify-between">
             <p className="text-cyan-600">Sold: {rating.count} times</p>
             <div className="flex items-center">
               <img src={Star} alt="rating" />

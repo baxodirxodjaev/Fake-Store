@@ -29,7 +29,7 @@ const Products = ({product} : ProductContextType | any) => {
             <div className="w-full h-[65%]  flex items-start justify-center ">
                 <div className="w-[45%] pt-2 h-full mx-auto flex justify-center items-center">
                     <img
-                        className=" w-full bg-red-400 object-contain group-hover:scale-105 transition duration-300"
+                        className=" w-full object-contain group-hover:scale-105 transition duration-300"
                         src={image} alt={category} />
                 </div>
             </div>
