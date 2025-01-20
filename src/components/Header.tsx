@@ -24,17 +24,27 @@ const Header = () => {
   return (
     <header className={`w-full h-20   ${isActive ? 'shadow-lg   transition-all duration-200 ' : ''} fixed z-50 mb-6 py-2`}>
         <div className="container h-full w-full  mx-auto flex items-center justify-between ">
-          <div className="h-full ml-3 shadow-lg  ">
-            <Link onClick={()=>setSelectedCAtegory('all products')}  to={'/'} className="h-full w-full">
-                <div className="h-full w-full bg-inherit hover:scale-110 transition-all duration-300  rounded-sm overflow-hidden  ">
-                  <img src={Logo} alt="logo"  className=" h-full w-full  object-cover  "/>
-                </div>
-            </Link>
-          </div>
-          {/* <span className="uppercase font-light font-sans  text-lg  italic">
-            Minimalistic and Simple E-commerce Website 
-            <hr />
-          </span> */}
+
+        <div className="w-20 ml-3  justify-center shadow-lg flex items-center overflow-hidden rounded-[50%]">
+          <Link
+            onClick={() => setSelectedCAtegory('all products')}
+            to={'/'}
+            className="h-full"
+          >
+            <div
+              className="h-full w-full bg-inherit 
+              hover:scale-110 transition-all duration-300  flex items-center justify-center overflow-hidden"
+            >
+              <img
+                src={Logo}
+                alt="logo"
+                className="h-full w-full object-cover "
+              />
+            </div>
+          </Link>
+        </div>
+
+          
             <div className="title-container">
               <h1 className=" text-[#343a40] text-center font-semibold flex flex-wrap justify-center gap-1
                  leading-5 text-balance text-sm sm:text-base md:text-2xl lg:text-3xl xl:text-4xl">
