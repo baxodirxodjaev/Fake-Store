@@ -1,0 +1,9 @@
+
+
+.bg-hero{
+    background-image: url(../../images/hero/top-bg-image.png);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position: bottom;
+}
+

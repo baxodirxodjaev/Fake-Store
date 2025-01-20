@@ -1,0 +1,80 @@
+
+
+/* Loader container */
+.loader-container {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    scroll-snap-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: 999;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    font-family: 'Arial', sans-serif;
+    overflow:hidden;
+  }
+  
+  /* Loader structure */
+  .loader {
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+    height: 20px;
+    position: relative;
+  }
+  
+  /* Loader elements */
+  .loader span {
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #64b5f6, #1e88e5);
+    animation: bounce 1.2s infinite ease-in-out;
+  }
+  
+  /* Animation delay for each span */
+  .loader span:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .loader span:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .loader span:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  .loader span:nth-child(4) {
+    animation-delay: 0.6s;
+  }
+  
+  /* Bounce animation */
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  /* Loader text styling */
+  .loader-text {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #0d47a1;
+    animation: fadeIn 2s infinite alternate;
+  }
+  
+  /* Fade-in effect for the text */
+  @keyframes fadeIn {
+    from {
+      opacity: 0.5;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

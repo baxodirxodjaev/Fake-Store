@@ -1,0 +1,7 @@
+body , header{
+    background-color: rgba(245, 239, 227, 0.555);
+}
+
+header{
+    background-color: rgb(250, 245, 236) !important ;
+}
